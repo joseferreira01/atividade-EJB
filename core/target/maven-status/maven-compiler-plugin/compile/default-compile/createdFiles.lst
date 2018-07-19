@@ -1,0 +1,5 @@
+br/edu/ifpb/dac/atividade/jsf/entity/Contato.class
+br/edu/ifpb/dac/atividade/jsf/controlador/Mensagem.class
+br/edu/ifpb/dac/atividade/jsf/servico/ContatoServico.class
+br/edu/ifpb/dac/atividade/jsf/infra/Repositorio.class
+br/edu/ifpb/dac/atividade/jsf/controlador/ContatoControlador.class
