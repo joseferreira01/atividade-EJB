@@ -5,7 +5,7 @@
  */
 package br.edu.ifpb.dac.atividade.jsf.controlador;
 
-import br.edu.ifpb.dac.atividade.jsf.entity.Contato;
+import br.edu.ifpb.shared.Contato;
 import br.edu.ifpb.dac.atividade.jsf.servico.ContatoServico;
 import java.io.Serializable;
 import java.util.List;

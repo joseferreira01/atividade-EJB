@@ -5,7 +5,7 @@
  */
 package br.edu.ifpb.dac.atividade.jsf.infra;
 
-import br.edu.ifpb.dac.atividade.jsf.entity.Contato;
+import br.edu.ifpb.shared.Contato;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.enterprise.context.Dependent;

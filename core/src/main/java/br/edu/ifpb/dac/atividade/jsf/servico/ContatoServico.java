@@ -5,53 +5,58 @@
  */
 package br.edu.ifpb.dac.atividade.jsf.servico;
 
-import br.edu.ifpb.dac.atividade.jsf.entity.Contato;
+import br.edu.ifpb.shared.serviceContato;
+import br.edu.ifpb.shared.Contato;
 import br.edu.ifpb.dac.atividade.jsf.infra.Repositorio;
 import java.util.List;
-import javax.enterprise.context.RequestScoped;
-import javax.inject.Inject;
-import javax.inject.Named;
-import javax.persistence.TypedQuery;
+import javax.ejb.EJB;
+import javax.ejb.Stateless;
 
 /**
  *
  * @author jose
  */
-@Named
-@RequestScoped
-public class ContatoServico {
+@Stateless
+public class ContatoServico implements serviceContato {
 
-    @Inject
+    @EJB
     private Repositorio repositorio;
 
+    @Override
     public void salvar(Contato contato) {
         System.err.println("sando "+contato);
         repositorio.salvar(contato);
         
     }
 
+    @Override
     public void atualizar(Contato contato) {
         System.err.println("atu" +contato);
         repositorio.atualizar(contato);
     }
 
+    @Override
     public void remover(Contato contato) {
         this.repositorio.remover(contato);
     }
 
+    @Override
     public Contato buscar(long id) {
         return repositorio.buscar(id);
     }
 
+    @Override
     public List<Contato> buscarTodos() {
         return repositorio.buscarTodos();
     }
 
+    @Override
     public List<Contato> getAllFirstLettersAsc() {
         return repositorio.getAllFirstLettersAsc();
 
     }
 
+    @Override
     public List<Contato> getContatoPorNome(String nome) {
         return repositorio.getContatoPorNome(nome);
     }
